@@ -2,63 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="$KSTATE on Solana — The Official Meme of KSTATE College" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$KSTATE - Official KSTATE Meme on Solana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>$KSTATE - Official Meme Coin</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <header id="home" class="hero">
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="castle1.jpeg" alt="Castle" class="hero-img" />
     <div class="hero-content">
-      <h1>$KSTATE</h1>
-      <p>The official Meme Token for KSTATE College, building on Solana.</p>
-      <a href="#" class="cta-button">Buy $KSTATE</a>
+      <h1 class="hero-title">$KSTATE</h1>
+      <p class="hero-subtitle">The Official Meme for KSTATE College on Solana</p>
+      <div class="hero-buttons">
+        <button class="buy-btn" onclick="scrollToBuyOptions()">
+          Buy Now
+        </button>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section about-section">
-    <div class="section-content">
-      <h2>What is $KSTATE?</h2>
-      <p>
-        Developed by KSTATE CS students to celebrate school pride on the Solana blockchain.
-        It’s a fun and fearless meme token that roars with purple power across the crypto galaxy.
+  <!-- About/Features Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <h2 class="section-title">Why $KSTATE?</h2>
+      <p class="section-description">
+        A meme token created by CS students to bring the fun, community,
+        and spirit of KSTATE to the Solana blockchain.
       </p>
+      <div class="features">
+        <div class="feature-card">
+          <h3>Fast</h3>
+          <p>Enjoy Solana's lightning-fast transactions.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Community</h3>
+          <p>Built by and for KSTATE students and fans.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Secure</h3>
+          <p>Backed by Solana's robust blockchain technology.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- TOKENOMICS SECTION -->
-  <section id="tokenomics" class="section tokenomics-section">
-    <div class="section-content">
-      <h2>Tokenomics</h2>
-      <ul>
-        <li>Total Supply: 1,000,000,000 $KSTATE</li>
-        <li>Liquidity Pool: 40%</li>
-        <li>Community & Airdrops: 30%</li>
-        <li>Dev & Marketing: 20%</li>
-        <li>Reserve: 10%</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ROADMAP SECTION -->
-  <section id="roadmap" class="section roadmap-section">
-    <div class="section-content">
-      <h2>Roadmap</h2>
-      <ol>
-        <li>Launch on Solana & Community Airdrop</li>
-        <li>Partnerships with campus clubs & local businesses</li>
-        <li>Develop Meme DApps & NFT Collections</li>
-        <li>Global Exchange Listings</li>
+  <!-- How to Buy Section -->
+  <section class="how-to-buy">
+    <div class="how-to-buy-container">
+      <h2 class="section-title">How to Buy $KSTATE</h2>
+      <ol class="buy-steps">
+        <li>Create a Solana-compatible wallet (e.g. Phantom).</li>
+        <li>Purchase or transfer SOL to your wallet.</li>
+        <li>Connect your wallet to a supported DEX or direct exchange.</li>
+        <li>Swap SOL for $KSTATE and join the community!</li>
       </ol>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Buy Now Buttons Section -->
+  <section class="buy-options" id="buy-options">
+    <div class="buy-options-container">
+      <h2 class="section-title">Ready to Buy?</h2>
+      <p class="section-description">Choose your preferred option below:</p>
+      <div class="button-group">
+        <button class="buy-option-btn" onclick="buyWithCard()">
+          Buy with Card
+        </button>
+        <button class="buy-option-btn" onclick="buyWithCrypto()">
+          Buy with Crypto
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
   <footer class="footer">
-    <p>© 2025 $KSTATE. Powered by Solana & KSTATE CS Students.</p>
+    <p class="footer-text">
+      © <span id="year"></span> $KSTATE. All rights reserved.
+    </p>
   </footer>
 
   <script src="script.js"></script>
