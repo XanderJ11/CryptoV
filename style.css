@@ -180,26 +180,33 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   text-align: center;
+  margin: 0 auto; /* Center the container */
 }
 
 .contract-bar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 1rem;
   background: #f9f9f9;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   padding: 1.5rem 1rem;
   margin-top: 2rem;
-  overflow-wrap: break-word;
+}
+
+/* Inner container for the address and button so they align neatly */
+.contract-bar-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 90%; /* Limit width so text doesn't overflow on narrow screens */
 }
 
 #contract-address {
   color: #4b2e83;
   font-weight: bold;
   font-size: 1rem;
+  word-wrap: break-word; /* Ensure long addresses wrap properly */
 }
 
 .copy-btn {
