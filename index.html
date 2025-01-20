@@ -76,15 +76,21 @@
     </div>
   </section>
 
-  <section class="contract-section">
+<section class="contract-section">
   <div class="contract-section-container">
     <h2 class="section-title">Contract Address</h2>
     <p class="section-description">
       Easily copy the official $KSTATE contract address to your clipboard:
     </p>
+    <!-- 
+      Added "contract-bar-inner" for a max-width container and
+      improved text wrapping in smaller devices.
+    -->
     <div class="contract-bar">
-      <span id="contract-address">HRAuT64o6rHQy4KCMfTEG9PxYESKg4quxwgskFtupump</span>
-      <button class="copy-btn" onclick="copyContractAddress()">Copy</button>
+      <div class="contract-bar-inner">
+        <span id="contract-address">SOL: 0xKSTATECS12345abcd6789</span>
+        <button class="copy-btn" onclick="copyContractAddress()">Copy</button>
+      </div>
     </div>
   </div>
 </section>
