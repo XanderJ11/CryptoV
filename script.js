@@ -1,33 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // SCROLL FADE-IN OBSERVER
-  const faders = document.querySelectorAll(".section p, .section ul, .section ol");
-  const options = {
-    threshold: 0.1
-  };
+// Current Year in Footer
+const yearSpan = document.getElementById('year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
 
-  const fadeInOnScroll = new IntersectionObserver((entries, fadeInOnScroll) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = "fadeIn 1.5s forwards";
-        fadeInOnScroll.unobserve(entry.target);
-      }
-    });
-  }, options);
+// Smooth scroll to the Buy section
+function scrollToBuyOptions() {
+  const buyOptionsSection = document.getElementById('buy-options');
+  if (buyOptionsSection) {
+    buyOptionsSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
-  faders.forEach(el => {
-    fadeInOnScroll.observe(el);
-  });
+// Example placeholders for buy interactions
+function buyWithCard() {
+  alert("Redirecting to a secure payment gateway for card purchase...");
+}
 
-  // Hero animations on load
-  const heroTitle = document.querySelector(".hero h1");
-  const heroText = document.querySelector(".hero p");
-  const heroButton = document.querySelector(".cta-button");
-
-  window.addEventListener("load", () => {
-    heroTitle.style.transform = "translateY(0)";
-    heroTitle.style.opacity = "1";
-    heroText.style.opacity = "1";
-    heroButton.style.opacity = "1";
-    heroButton.style.transform = "translateY(0)";
-  });
-});
+function buyWithCrypto() {
+  alert("Redirecting to a DEX or wallet connection for crypto purchase...");
+}
