@@ -20,3 +20,13 @@ function buyWithCard() {
 function buyWithCrypto() {
   alert("Redirecting to a DEX or wallet connection for crypto purchase...");
 }
+
+function copyContractAddress() {
+  const contractSpan = document.getElementById("contract-address");
+  const contractText = contractSpan ? contractSpan.textContent : "";
+  if (contractText) {
+    navigator.clipboard.writeText(contractText).then(() => {
+      alert("Contract address copied to clipboard!");
+    });
+  }
+}
