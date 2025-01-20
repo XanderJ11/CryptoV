@@ -1,11 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // MENU TOGGLE
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-
   // SCROLL FADE-IN OBSERVER
   const faders = document.querySelectorAll(".section p, .section ul, .section ol");
   const options = {
