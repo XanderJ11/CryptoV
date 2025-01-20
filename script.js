@@ -23,10 +23,48 @@ function buyWithCrypto() {
 
 function copyContractAddress() {
   const contractSpan = document.getElementById("contract-address");
-  const contractText = contractSpan ? contractSpan.textContent : "";
-  if (contractText) {
-    navigator.clipboard.writeText(contractText).then(() => {
-      alert("Contract address copied to clipboard!");
-    });
+  if (!contractSpan) return;
+
+  const contractText = contractSpan.textContent.trim();
+
+  // Modern approach using navigator.clipboard (requires HTTPS or localhost)
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(contractText).then(
+      () => {
+        alert("Contract address copied to clipboard!");
+      },
+      (err) => {
+        console.error("Clipboard error: ", err);
+        fallbackCopyText(contractText);
+      }
+    );
+  } else {
+    // Fallback for older browsers or non-HTTPS
+    fallbackCopyText(contractText);
   }
 }
+
+// Fallback method: Create a temp textarea, copy from it, then remove it
+function fallbackCopyText(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  // Move outside the visible area
+  textArea.style.position = "fixed";
+  textArea.style.left = "-99999px";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  try {
+    if (document.execCommand("copy")) {
+      alert("Contract address copied to clipboard!");
+    } else {
+      alert("Failed to copy address. Please copy manually.");
+    }
+  } catch (err) {
+    console.error("Fallback copy error: ", err);
+    alert("Failed to copy address. Please copy manually.");
+  }
+  textArea.remove();
+}
+
