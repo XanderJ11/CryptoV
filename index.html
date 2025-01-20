@@ -1,118 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$KSTATE - Official Meme Token</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
-      color: #333;
-    }
-    header {
-      background-color: #4b2e83; /* KSTATE purple */
-      padding: 1rem;
-      text-align: center;
-      color: #fff;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background: url('hero-banner.jpg') center/cover no-repeat;
-      min-height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .section {
-      background: #fff;
-      margin: 1rem 0;
-      padding: 1rem;
-      border-radius: 5px;
-    }
-    .footer {
-      text-align: center;
-      padding: 1rem;
-      color: #fff;
-      background-color: #4b2e83;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="description" content="$KSTATE on Solana — The Official Meme of KSTATE College" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$KSTATE - Official KSTATE Meme on Solana</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="#tokenomics">Tokenomics</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#community">Community</a>
-    </nav>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="logo">KSTATE</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#tokenomics">Tokenomics</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+    </ul>
+    <button class="menu-toggle" aria-label="Toggle Navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <h1>$KSTATE</h1>
+      <p>The official Meme Token for KSTATE College, building on Solana.</p>
+      <a href="#" class="cta-button">Buy $KSTATE</a>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>$KSTATE on Solana</h1>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section about-section">
+    <div class="section-content">
+      <h2>What is $KSTATE?</h2>
+      <p>
+        Developed by KSTATE CS students to celebrate school pride on the Solana blockchain.
+        It’s a fun and fearless meme token that roars with purple power across the crypto galaxy.
+      </p>
+    </div>
   </section>
 
-  <div class="container">
-    <section id="about" class="section">
-      <h2>About $KSTATE</h2>
-      <p>
-        $KSTATE is the official meme token for Kansas State University, developed by CS students on Solana.
-        It unites K-Staters under one playful, community-driven project.
-      </p>
-    </section>
-
-    <section id="tokenomics" class="section">
+  <!-- TOKENOMICS SECTION -->
+  <section id="tokenomics" class="section tokenomics-section">
+    <div class="section-content">
       <h2>Tokenomics</h2>
       <ul>
-        <li>Max Supply: 1,000,000,000 $KSTATE</li>
-        <li>Blockchain: Solana</li>
-        <li>Distribution: Airdrops, Community Rewards, Liquidity Pool</li>
-        <li>Use Cases: Merchandise, Giveaways, Meme Contests</li>
+        <li>Total Supply: 1,000,000,000 $KSTATE</li>
+        <li>Liquidity Pool: 40%</li>
+        <li>Community & Airdrops: 30%</li>
+        <li>Dev & Marketing: 20%</li>
+        <li>Reserve: 10%</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section id="roadmap" class="section">
+  <!-- ROADMAP SECTION -->
+  <section id="roadmap" class="section roadmap-section">
+    <div class="section-content">
       <h2>Roadmap</h2>
       <ol>
-        <li>Q1 2025: Launch $KSTATE & Airdrop to K-State community</li>
-        <li>Q2 2025: Meme contest & marketing campaign</li>
-        <li>Q3 2025: Partnerships with campus clubs, merch store</li>
-        <li>Q4 2025: DEX listing & further expansions</li>
+        <li>Launch on Solana & Community Airdrop</li>
+        <li>Partnerships with campus clubs & local businesses</li>
+        <li>Develop Meme DApps & NFT Collections</li>
+        <li>Global Exchange Listings</li>
       </ol>
-    </section>
+    </div>
+  </section>
 
-    <section id="community" class="section">
-      <h2>Community</h2>
-      <p>
-        Join our Discord and Twitter for campus events, meme battles, and prize giveaways. 
-        Together, we spread the purple pride.
-      </p>
-      <p>
-        <a href="https://discord.gg/kstate">Discord</a> | 
-        <a href="https://twitter.com/kstate">Twitter</a>
-      </p>
-    </section>
-  </div>
-
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 $KSTATE on Solana. All Rights Reserved.</p>
+    <p>© 2025 $KSTATE. Powered by Solana & KSTATE CS Students.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
